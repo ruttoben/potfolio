@@ -22,7 +22,7 @@ html{
 }
 body{
     background: #cfcecc;
-    padding: 30rem;
+    padding-left: 30rem;
     
 }
 
@@ -39,6 +39,10 @@ header{
     flex-flow: column;
     padding: 8rem 2rem;
 
+}
+section{
+    padding: 1rem 5%;
+    min-height: 100vh;
 }
 
 header .logo{
@@ -114,7 +118,22 @@ header .follow a:focus{
     transition: 10ms linear;
 }
 
-
+ 
+.home {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.home .image {
+    flex: 1 1 40rem;
+}
+.home .image img{
+    width: 100%;
+}
+.home .content{
+    flex: 1 1 40rem;
+}
 
 /*media queries*/
 @media (max-width:991px){
