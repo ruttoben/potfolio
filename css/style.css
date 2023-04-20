@@ -62,7 +62,7 @@ header .navbar a {
 }
 
 header .navbar a:hover{
-    letter-spacing: 2rem;
+    letter-spacing: .2rem;
     color: var(--main-color);
 }
 
@@ -82,7 +82,7 @@ header .follow a:focus{
 #menu-bars{
     position: fixed;
     top: 1rem; right: 1rem;
-    z-index:1000;
+    z-index: 10000;
     background: var(--main-color); 
     color: #fff;
     border-radius: 5rem;
@@ -91,6 +91,7 @@ header .follow a:focus{
     cursor: pointer;
     display: none;
 }
+
 .cusor-1{
     position: absolute;
     top: 0px; left: 0px;
@@ -110,30 +111,13 @@ header .follow a:focus{
     transform: translate(-50%, -50%);
     border-radius: 50%;
     z-index: 10000;
-    transition: 1ms linear;
+    transition: 10ms linear;
 }
-.cusor-3{
-    position: absolute;
-    top: 0px; left: 0px;
-    height: 2rem; width: 2rem;
-    background: var(--main-color);
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 10000;
-}
-
-
-
-
-
-
-
 
 
 
 /*media queries*/
-@media (max-width:990px){
+@media (max-width:991px){
     html{
         font-size: 55%;
     }
@@ -146,8 +130,12 @@ header .follow a:focus{
      header{
         left: -120%;
      }
-     header .active{
+     header.active{
         left: 0%;
+     }
+     .cusor-1,
+     .cusor-2{
+        display: none;
      }
 }
 

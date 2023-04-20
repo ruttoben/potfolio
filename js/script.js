@@ -17,7 +17,6 @@ window.onscroll = () => {
 
 let cusor1 =document.querySelector('.cusor-1')
 let cusor2 =document.querySelector('.cusor-2')
-let cusor3 =document.querySelector('.cusor-3')
 
 
 
@@ -26,6 +25,4 @@ window.onmousemove = (e) => {
     cusor1.style.left = e.pageX + 'px';
     cusor2.style.top = e.pageY + 'px';
     cusor2.style.left = e.pageX + 'px';
-    cusor3.style.top = e.pageY + 'px';
-    cusor3.style.left = e.pageX + 'px';
 }
