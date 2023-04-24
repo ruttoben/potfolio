@@ -39,11 +39,12 @@ body{
 .btn{
     display: inline-block;
     margin-top: 1rem;
-    padding: 1.5rem 3rem;
+    padding: 1.5rem 2rem;
     background: var(--main-color);
     color:#cfcecc;
     cursor: pointer;
     font-size: 1.7rem;
+    border-radius: 40rem;
 }
 .btn:hover{
     background: var(--primary-color);
@@ -282,12 +283,22 @@ header .follow a:focus{
 }
 .about .row-2 .box-container .box{
     flex: 1 1 15rem;
-    background: #fff;
+    background: #ffffff;
     padding: 2rem;
     border-radius: .5rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0 0.1);
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0 0.8);
+
+}
+.about .row-2 .box-container .box h3{
+    color: var(--primary-color);
+    font-size: 3rem;
 }
 
+.about .row-2 .box-container .box p{
+    color: black;
+    font-size: 1.8rem;
+    padding-top: .5rem;
+}
 .about .row-2 .skills .progress:nth-child(1) .bar span{
     width: 80%;
 }
@@ -305,7 +316,67 @@ header .follow a:focus{
 }
 
 
+.service .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+   
+}
 
+
+.service .box-container .box{
+    flex: 1 1 30rem;
+    padding: 2rem;
+    background-color: whitesmoke;
+    border-radius: .5rem;
+    box-shadow: .5rem 1rem rgba(0, 0, 0 0.8);
+    text-align: center;
+}
+
+.service .box-container .box i{
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    color: whitesmoke;
+    background: var(--main-color);
+}
+
+.service .box-container .box h3{
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    padding-top: 1rem;
+}
+
+.service .box-container .box p{
+    font-size: 1.5rem;
+    padding-top: .5rem;
+    color: #444;
+}
+
+.experience .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.experience .box-container .box{
+    position: relative;
+    flex: 1 1 100rem;
+    border-left: .2rem solid var(--main-color);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    background: #ffffff;
+}
+
+.experience .box-container .box .content{
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0 0.8);
+    border-radius: .5rem;
+    padding: 1.5rem;
+    background: #fff;
+}
 
 
 
