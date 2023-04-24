@@ -87,21 +87,21 @@ header .logo span{
 }
 header .navbar a::before{
     float: left;
-    margin-right: 3rem;
+    margin-right: 4rem;
 
 }
 
 header .navbar a {
     display: block;
-    font-size: 2rem;
+    font-size: 1.2rem;
     color: #fff;
-    margin: 2rem 0;
+    margin: 0rem 0;
     padding: 1.5rem;
 
 }
 
 header .navbar a:hover{
-    letter-spacing: .2rem;
+   
     color: var(--main-color);
 }
 
