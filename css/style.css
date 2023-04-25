@@ -68,7 +68,7 @@ header{
 
 }
 section{
-    padding: 1rem 5%;
+    padding: 1% 1%;
     min-height: 100vh;
 }
 
@@ -97,6 +97,7 @@ header .navbar a {
     color: #fff;
     margin: 0rem 0;
     padding: 1.5rem;
+    line-height: 3rem;
 
 }
 
@@ -160,19 +161,17 @@ header .follow a:focus{
     align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;
+    margin-top: 0;
 }
 .home .image {
-    flex: 1 1 30rem;
-    border-radius: 50%;
+    flex: 1 1 25rem;
 }
 .home .image img{
     width: 100%;
 }
 .home .content{
-    flex: 1 1 30rem;
-    
+    flex: 1 1 40rem;
 }
-
 .home .content .hi{
     font-size: 1.5rem;
     color: var(--primary-color);
@@ -476,6 +475,7 @@ header .follow a:focus{
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
+    padding-bottom: 2rem;
 }
 
 
@@ -517,10 +517,71 @@ header .follow a:focus{
 
 .contact .icon-container .icons p{
     color: #0c0a0a;
-    font-size: 1rem;
+    font-size: 1.7rem;
     padding: .5rem 0;
 
 }
+
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.contact .row form{
+    flex: 1 1 45rem;
+    background: white;
+    padding: 0 2rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0 0.8);
+    border: .3rem;
+}
+
+
+.contact .row .map {
+    flex: 1 1 45rem;
+    border: 1rem solid white;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0 0.8);
+    border: .5rem;
+    width: 100%;
+}
+
+.contact .row form .box,
+.contact .row form textarea{
+    width: 100%;
+    border-bottom: .1rem solid #333;
+    color: #333;
+    text-overflow: none;
+    font-size: 1.7rem;
+    padding: .5rem 0;
+    margin: .5rem 0;
+}
+
+
+
+.contact .row form .box:focus,
+.contact .row form textarea:focus{
+    border-color: var(--main-color);
+}
+
+
+.contact .row form .box::placeholder,
+.contact .row form textarea::placeholder{
+    text-transform: capitalize;
+
+}
+
+
+
+.contact .row form textarea{
+    height: 10rem;
+    resize: none;
+}
+
+.contact .row form .btn{
+    margin-top: 0;
+    margin-bottom: .61rem;
+}
+
 
 /*media queries*/
 @media (max-width:991px){
@@ -550,16 +611,25 @@ header .follow a:focus{
     html{
         font-size: 50%;
     }
+    body{
+        margin-top: 3rem;
+        padding: 3rem;
+    }
     header{
         width: 100%;
     }
     .experience .box-container .box {
         padding-right:  0rem;
     }
-    .portfolio .box-container .box:hover img{
+    .portfolio .box-container .box img{
         height: 80%;
         width: 85%;
     }
+    .btn{
+        border-radius: 0px;
+        margin-right: 2rem;
+    }
+    
 }
 
 
