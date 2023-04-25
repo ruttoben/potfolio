@@ -471,6 +471,57 @@ header .follow a:focus{
 }
 
 
+
+.contact .icon-container{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+
+.contact .icon-container .icons{
+    flex: 1 1 30rem;
+    text-align: center;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0 0.8);
+    border-radius: .3rem;
+}
+
+
+.contact .icon-container .icons i{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    background: var(--main-color);
+    color: white;
+    border-radius: 50%;
+    transition: .4s ease;
+}
+.contact .icon-container .icons i:hover{
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    font-size: 3rem;
+    background: var(--secondary-color);
+    color: var(--main-color);
+}
+
+.contact .icon-container .icons h3{
+    color: #020000;
+    font-size: 2rem;
+    padding: .5rem 0;
+
+}
+
+.contact .icon-container .icons p{
+    color: #0c0a0a;
+    font-size: 1rem;
+    padding: .5rem 0;
+
+}
+
 /*media queries*/
 @media (max-width:991px){
     html{
