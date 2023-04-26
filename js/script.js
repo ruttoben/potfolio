@@ -26,3 +26,26 @@ window.onmousemove = (e) => {
     cusor2.style.top = e.pageY + 'px';
     cusor2.style.left = e.pageX + 'px';
 }
+
+
+
+let typingText = document.querySelector(".change_txt")
+ let text = ["web developer","Cyber-Security", "ICT support personel"]
+
+let arrayIndex = 1;
+
+function ChangingTxt(){
+    if (arrayIndex<text.length){
+        typingText.innerHTML="Hi I am a " + text[arrayIndex]
+        arrayIndex = arrayIndex + 1
+    }
+    else {
+        arrayIndex = 0;
+        typingText.innerHTML= "Hi I am a " + text[arrayIndex]
+        arrayIndex = arrayIndex + 1
+    }
+    
+}
+
+ChangingTxt();
+setInterval(ChangingTxt, 1000);

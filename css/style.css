@@ -189,8 +189,9 @@ header .follow a:focus{
 }
 
 
-.home .content .info{
+.home .content .change_txt{
     font-size: 2.5rem;
+    text-transform: none;
     color: var(--main-color);
 }
 
