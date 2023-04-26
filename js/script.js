@@ -29,23 +29,9 @@ window.onmousemove = (e) => {
 
 
 
-let typingText = document.querySelector(".change_txt")
- let text = ["web developer","Cyber-Security", "ICT support personel"]
-
-let arrayIndex = 1;
-
-function ChangingTxt(){
-    if (arrayIndex<text.length){
-        typingText.innerHTML="Hi I am a " + text[arrayIndex]
-        arrayIndex = arrayIndex + 1
-    }
-    else {
-        arrayIndex = 0;
-        typingText.innerHTML= "Hi I am a " + text[arrayIndex]
-        arrayIndex = arrayIndex + 1
-    }
-    
-}
-
-ChangingTxt();
-setInterval(ChangingTxt, 1000);
+var typed =  new Typed(".typing",{
+    strings:["", "a web designer", "a Data analyst", "a cyber-security"],
+    typeSpeed:100,
+    BackSpeed: 60,
+    loop: true
+});
