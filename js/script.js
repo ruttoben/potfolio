@@ -45,5 +45,25 @@ var typed =  new Typed("#text1",{
                   responsive, and scalable web applications.`],
     typeSpeed:35,
     BackSpeed: 60,
+    showCursor: false,
     loop: false
+
+});
+
+
+
+
+new fullpage('#fullpage', {
+	onSlideLeave: function( section, origin, destination, direction, trigger){
+		var leavingSlide = this;
+
+		if(section.index == 1 && origin.index == 0 && direction == 'right'){
+			const image1 = document.getElementById("#image1")
+		}
+
+		
+		if(section.index == 1 && origin.index == 2 && direction == 'left'){
+			
+		}
+	}
 });
