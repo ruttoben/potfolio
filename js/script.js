@@ -30,8 +30,20 @@ window.onmousemove = (e) => {
 
 
 var typed =  new Typed(".typing",{
-    strings:["", "a web designer", "a Data analyst", "a cyber-security"],
-    typeSpeed:100,
+    strings:["", " web designer", " Data analyst", " cyber-security consoltunt"],
+    typeSpeed:80,
     BackSpeed: 60,
     loop: true
+});
+
+var typed =  new Typed("#text1",{
+    strings:[`I am passionate about using technology to solve real-world 
+                problems and create innovative solutions.  My expertise includes front-end
+                 development with HTML, CSS, and JavaScript, as well as back-end development
+                  using Node.js and databases such as MongoDB and MySQL.</br> I have a keen eye for 
+                  design and user experience, and I always strive to create intuitive, 
+                  responsive, and scalable web applications.`],
+    typeSpeed:35,
+    BackSpeed: 60,
+    loop: false
 });
