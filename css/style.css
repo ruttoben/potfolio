@@ -633,6 +633,7 @@ header .follow a:focus{
     .home .image img{
 
         border-radius: 25%;
+        align-items: center;
     }
     .experience .box-container .box {
         padding-right:  0rem;

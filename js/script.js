@@ -52,18 +52,3 @@ var typed =  new Typed("#text1",{
 
 
 
-
-new fullpage('#fullpage', {
-	onSlideLeave: function( section, origin, destination, direction, trigger){
-		var leavingSlide = this;
-
-		if(section.index == 1 && origin.index == 0 && direction == 'right'){
-			const image1 = document.getElementById("#image1")
-		}
-
-		
-		if(section.index == 1 && origin.index == 2 && direction == 'left'){
-			
-		}
-	}
-});
