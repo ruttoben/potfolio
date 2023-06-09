@@ -71,7 +71,8 @@ header{
 }
 section{
     padding: 1% 1%;
-    min-height: 100vh;
+    max-height: 200vh;
+    margin: 20px;
 }
 
 header .logo{
@@ -374,6 +375,7 @@ header .follow a:focus{
     font-size: 1.5rem;
     padding-top: .5rem;
     color: #444;
+    text-transform: none;
 }
 
 .experience .box-container {
@@ -434,7 +436,7 @@ header .follow a:focus{
     position: relative;
     overflow: hidden;
     border-radius: .5rem;
-    border: 1rem solid rgba(245, 245, 245, 0.877);
+    border: 1rem solid rgba(245, 245, 245, 0.477);
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0 0.8);
 }
 .portfolio .box-container .box img{
@@ -609,6 +611,12 @@ header .follow a:focus{
      header{
         left: -120%;
      }
+     .portfolio .box-container .box img{
+        height: 80%;
+        width: 85%;
+        border-color: none;
+    }
+  
      header.active{
         left: 0%;
      }
