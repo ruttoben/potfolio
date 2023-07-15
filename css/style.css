@@ -268,7 +268,7 @@ header .follow a:focus{
     flex: 1 1 20rem;
 }
 .about .row-1 .content .box-container .box span{
-    color: var(--primary-color);
+    color: var(--primary-);
 }
 
 
@@ -311,7 +311,7 @@ header .follow a:focus{
 .about .row-2 .skills .progress .bar span{
     display: block;
     height: 100%;
-    background: var(--primary-color);
+    background: var(--main-color);
     border-radius:50rem;
 }
 
