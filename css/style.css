@@ -285,7 +285,7 @@ header .follow a:focus{
 
 
 .about .row-2 .skills{
-    flex: 1 1 40rem;
+    flex: 1 1 50rem;
 }
 
 .about .row-2 .skills .progress{
@@ -316,7 +316,7 @@ header .follow a:focus{
 }
 
 .about .row-2 .box-container{
-    flex: 1 1 40rem;
+    flex: 1 1 15rem;
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
@@ -366,7 +366,7 @@ header .follow a:focus{
 
 
 .service .box-container .box{
-    flex: 1 1 30rem;
+    flex: 1 1 40rem;
     padding: 2rem;
     background-color: whitesmoke;
     border-radius: .5rem;
@@ -450,7 +450,7 @@ header .follow a:focus{
 
 
 .portfolio .box-container .box {
-    flex: 1 1 30rem;
+    flex: 1 1 40rem;
     height: 25rem;
     position: relative;
     overflow: hidden;
@@ -458,16 +458,64 @@ header .follow a:focus{
     border: 1rem solid rgba(245, 245, 245, 0.477);
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0 0.8);
 }
-.portfolio .box-container .box img{
-    height: 100%;
-    width: 100%;
+.portfolio .box-container .box .animated-title{
+    height: 80%;
+    width: 80%;
     object-fit: cover;
     border-radius: .5rem;
     position: relative;
     z-index: 1;
 }
 
-.portfolio .box-container .box:hover img{
+@keyframes showTopText {
+    0% { transform: translate3d(0, 100%, 0); }
+    40%, 60% { transform: translate3d(0, 50%, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+  }
+  @keyframes showBottomText {
+    0% { transform: translate3d(0, -100%, 0); }
+    100% { transform: translate3d(0, 0, 0); } }
+
+    .portfolio .box-container .box .animated-title > div {
+        height: 50%;
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+      }
+      .animated-title > div div {
+        font-size: 2.4rem;
+        padding: 1rem 0;
+        position: absolute;
+      }
+      .animated-title > div div span {
+        display: block;
+      }
+      .animated-title > div.text-top {
+        border-bottom: .1rem solid #000;
+        top: 0;
+      }
+      .animated-title > div.text-top div {
+        animation: showTopText 3s ease-out;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards ;
+        bottom: 0;
+        transform: translate(0, 100%);
+      }
+      .animated-title > div.text-top div span:first-child {
+        color: #767676;
+      }
+      .animated-title > div.text-bottom {
+        bottom: 0;
+      }
+      .animated-title > div.text-bottom div {
+        animation: showBottomText 3s ease-in;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+        top: 0;
+        transform: translate(0, -100%);
+      }
+
+.portfolio .box-container .box:hover .animated-title{
     height: 80%;
     width: 80%;
 }
@@ -483,6 +531,7 @@ header .follow a:focus{
 .portfolio .box-container .box .icons{
     position: absolute;
     top: 1rem; right: 1rem;
+    display: hidden;
 }
 
 .portfolio .box-container .box .icons a{
@@ -629,6 +678,7 @@ header .follow a:focus{
     #menu-bars{
         display: initial;
      }
+     
      header{
         left: -120%;
      }
@@ -659,6 +709,9 @@ header .follow a:focus{
     header{
         width: 100%;
     }
+    .about .row-2 .skills{
+        flex-direction: column;
+     }
     .home .image img{
 
         border-radius: 25%;
