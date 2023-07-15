@@ -24,7 +24,7 @@ html{
 }
 body{
     background: #cfcecc;
-    padding-left: 30rem;
+    padding: 2rem;
     line-height: 1.5;
     
 }
@@ -67,12 +67,12 @@ header{
     text-align: center;
     flex-flow: column;
     padding: 8rem 2rem;
+    
 
 }
 section{
-    padding: 1% 1%;
-    max-height: 200vh;
-    margin: 20px;
+    margin: 0rem;
+    padding: 0rem;
 }
 
 header .logo{
@@ -119,7 +119,12 @@ header .follow a{
 header .follow a:hover {
     color: var(--main-color);
 }
-
+header{
+    left: -120%;
+ }
+header.active{
+    left: 0%;
+ }
 header .follow a:focus{
     outline: var(--main-color);
 }
@@ -134,9 +139,11 @@ header .follow a:focus{
     font-size: 3rem;
     cursor: pointer;
     transition: all 2s linear;
-    display: none;
+    
 }
-
+#menu-bars{
+        display: initial;
+ }
 .cusor-1{
     position: absolute;
     top: 0px; left: 0px;
@@ -165,7 +172,9 @@ header .follow a:focus{
     align-items:center;
     flex-wrap: wrap;
     gap: 1.5rem;
-    margin-top: 0;
+    margin-top:0rem;
+    padding: 0rem 3rem ;
+
 }
 .home .image {
     flex: 1 1 25rem;
@@ -178,6 +187,7 @@ header .follow a:focus{
 }
 .home .content{
     flex : 1 1 25rem;
+
 }
 .home .content .hi{
     font-size: 2rem;
@@ -210,6 +220,12 @@ header .follow a:focus{
     line-height: 2;
 }
 
+.about{
+    background-color: #0aaa3a1c;
+    animation: ease-in-out 200ms ;
+    margin: 0px;
+    padding: 0rem;
+}
 
 .about .row-1{
     display: flex;
@@ -263,6 +279,8 @@ header .follow a:focus{
     flex-wrap: wrap;
     gap: 1.5rem;
     align-items: center;
+    height: fit-content;
+    padding: 2rem;
 }
 
 
@@ -305,7 +323,7 @@ header .follow a:focus{
 }
 .about .row-2 .box-container .box{
     flex: 1 1 15rem;
-    background: #ffffff;
+    background: #0aaa3a1c;
     padding: 2rem;
     border-radius: .5rem;
     box-shadow: 0.5rem 1rem rgba(0, 0, 0 0.8);
@@ -342,6 +360,7 @@ header .follow a:focus{
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
+    background-color: #9f69021f;
    
 }
 
@@ -397,7 +416,7 @@ header .follow a:focus{
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0 0.8);
     border-radius: .5rem;
     padding: 1.5rem;
-    background: #fff;
+    background: #0aaa3a1c;
 }
 
 .experience .box-container .box .content span{
@@ -410,7 +429,7 @@ header .follow a:focus{
 }
 
 .experience .box-container .box .content h3{
-    font-size: 2.4rem;
+	font-size: 2.4rem;
     color: var(--main-color);
     padding-top: .5rem;
 }
@@ -497,7 +516,7 @@ header .follow a:focus{
     flex: 1 1 30rem;
     text-align: center;
     padding: 2rem;
-    background: #fff;
+    background: whitesmoke;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0 0.8);
     border-radius: .3rem;
 }
@@ -509,7 +528,7 @@ header .follow a:focus{
     line-height: 5rem;
     font-size: 2rem;
     background: var(--main-color);
-    color: white;
+    color: whitesmoke;
     border-radius: 50%;
     transition: .4s ease;
 }
@@ -544,7 +563,7 @@ header .follow a:focus{
 
 .contact .row form{
     flex: 1 1 45rem;
-    background: white;
+    background: whitesmoke;
     padding: 0 2rem;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0 0.8);
     border: .3rem;
@@ -553,7 +572,7 @@ header .follow a:focus{
 
 .contact .row .map {
     flex: 1 1 45rem;
-    border: 1rem solid white;
+    border: 1rem solid whites;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0 0.8);
     border: .5rem;
     width: 100%;
@@ -568,6 +587,7 @@ header .follow a:focus{
     font-size: 1.7rem;
     padding: .5rem 0;
     margin: .5rem 0;
+    background-color: whitesmoke;
 }
 
 
@@ -589,6 +609,7 @@ header .follow a:focus{
 .contact .row form textarea{
     height: 10rem;
     resize: none;
+    background-color: whitesmoke;
 }
 
 .contact .row form .btn{
