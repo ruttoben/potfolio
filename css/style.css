@@ -2,8 +2,10 @@
 
 :root{
     --main-color: #0d7e3cc7;
-    --primary-color: #b8810c;
-    --secondary-color: wheat;
+    --primary-color: #ec7b03;
+    --secondary-color: rgb(238, 224, 197);
+    --fadedwhite-color: #0aaa3a1c;
+    --box-color: #f5f5f58a;
 }
 
 *{
@@ -24,9 +26,8 @@ html{
 }
 body{
     background: #cfcecc;
-    padding: 2rem;
     line-height: 1.5;
-    
+    margin-top: 2rem;
 }
 
 .heading {
@@ -72,7 +73,7 @@ header{
 }
 section{
     margin: 0rem;
-    padding: 0rem;
+    padding: 3rem;
 }
 
 header .logo{
@@ -224,7 +225,7 @@ header .follow a:focus{
     background-color: #0aaa3a1c;
     animation: ease-in-out 200ms ;
     margin: 0px;
-    padding: 0rem;
+    
 }
 
 .about .row-1{
@@ -285,7 +286,7 @@ header .follow a:focus{
 
 
 .about .row-2 .skills{
-    flex: 1 1 50rem;
+    flex: 1 1 1rem;
 }
 
 .about .row-2 .skills .progress{
@@ -316,7 +317,7 @@ header .follow a:focus{
 }
 
 .about .row-2 .box-container{
-    flex: 1 1 15rem;
+    flex: 1 1 1rem;
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
@@ -360,7 +361,7 @@ header .follow a:focus{
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-    background-color: #9f69021f;
+    background-color: linear-gradient(rgba(230, 161, 12, 0.774) rgba(71, 197, 12, 0.671));;
    
 }
 
@@ -368,9 +369,8 @@ header .follow a:focus{
 .service .box-container .box{
     flex: 1 1 40rem;
     padding: 2rem;
-    background-color: whitesmoke;
+    background-color: var(--box-color);
     border-radius: .5rem;
-    box-shadow: .5rem 1rem rgba(0, 0, 0 0.8);
     text-align: center;
 }
 
@@ -393,8 +393,11 @@ header .follow a:focus{
 .service .box-container .box p{
     font-size: 1.5rem;
     padding-top: .5rem;
-    color: #444;
+    color: #181818;
     text-transform: none;
+    font-style: italic;
+    text-align: justify;
+    text-indent: 2rem;
 }
 
 .experience .box-container {
@@ -409,7 +412,6 @@ header .follow a:focus{
     border-left: .2rem solid var(--main-color);
     padding-left: 2rem;
     padding-right: 2rem;
-    background: #ffffff;
 }
 
 .experience .box-container .box .content{
@@ -443,28 +445,41 @@ header .follow a:focus{
     text-transform: none;
 }
 .portfolio .box-container{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     gap: 1.5rem;
-}
-
+    overflow-x: auto;
+    grid-auto-flow: column;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+    padding: 0rem;
+    }
+    .portfolio .box-container > *{
+        scroll-snap-align: start;
+    }
 
 .portfolio .box-container .box {
-    flex: 1 1 40rem;
-    height: 25rem;
+    height: 30rem;
     position: relative;
-    overflow: hidden;
     border-radius: .5rem;
     border: 1rem solid rgba(245, 245, 245, 0.477);
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0 0.8);
+    width: 50rem;
+    display: grid;
 }
-.portfolio .box-container .box .animated-title{
+.portfolio .box-container .box .animated-title > div {
     height: 80%;
     width: 80%;
     object-fit: cover;
     border-radius: .5rem;
-    position: relative;
+    position: absolute;
     z-index: 1;
+}
+.portfolio .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+    position: relative;
+    z-index: -1;
 }
 
 @keyframes showTopText {
@@ -481,6 +496,7 @@ header .follow a:focus{
         overflow: hidden;
         position: absolute;
         width: 100%;
+        background-color: rgba(0, 0, 0, 0.47);
       }
       .animated-title > div div {
         font-size: 2.4rem;
@@ -489,30 +505,34 @@ header .follow a:focus{
       }
       .animated-title > div div span {
         display: block;
+        color: var(--primary-color);
       }
       .animated-title > div.text-top {
-        border-bottom: .1rem solid #000;
         top: 0;
+        width: 60%;
       }
       .animated-title > div.text-top div {
-        animation: showTopText 3s ease-out;
-        animation-delay: 0.5s;
-        animation-fill-mode: forwards ;
+        animation: showTopText 8s cubic-bezier(0.88, -0.45, 0.265, 0.225) infinite;
+        animation-delay: .1s ;
+        animation-fill-mode:  forwards, backwards ;
         bottom: 0;
         transform: translate(0, 100%);
+        color: var(--secondary-color);
       }
       .animated-title > div.text-top div span:first-child {
-        color: #767676;
+        color: var(--secondary-color);
+        
       }
       .animated-title > div.text-bottom {
         bottom: 0;
       }
       .animated-title > div.text-bottom div {
-        animation: showBottomText 3s ease-in;
-        animation-delay: 0.5s;
-        animation-fill-mode: forwards;
+        animation: showBottomText 10s cubic-bezier(0.88, -0.45, 0.365, 0.55) infinite;
+        animation-fill-mode: forwards, backwards;
         top: 0;
+        animation-delay: .6s;
         transform: translate(0, -100%);
+        color: var(--secondary-color);
       }
 
 .portfolio .box-container .box:hover .animated-title{
@@ -524,14 +544,26 @@ header .follow a:focus{
     position: absolute;
     bottom: .5rem; left: 1rem;
     font-size: 2.6rem;
-    color: black;
+    color: var(--primary-color);
     text-transform: uppercase;
+    z-index: 5;
+    padding: 3rem;
+}
+
+.portfolio .box-container .box h4{
+    position: absolute;
+    bottom: .5rem; left: 1rem;
+    font-size: 2.6rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    z-index: 5;
 }
 
 .portfolio .box-container .box .icons{
     position: absolute;
     top: 1rem; right: 1rem;
     display: hidden;
+    z-index: 10;
 }
 
 .portfolio .box-container .box .icons a{
@@ -539,11 +571,12 @@ header .follow a:focus{
     height: 4rem;
     width: 4rem;
     border-radius: .5rem;
-    background: wheat;
+    background: rgba(245, 222, 179, 0);
     font-size: 1.7rem;
     line-height: 4rem;
     text-align: center;
     margin-bottom: 1rem;
+    color: azure;
 }
 
 .portfolio .box-container .box .icons a:hover{
@@ -565,7 +598,7 @@ header .follow a:focus{
     flex: 1 1 30rem;
     text-align: center;
     padding: 2rem;
-    background: whitesmoke;
+    background: var(--box-color);
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0 0.8);
     border-radius: .3rem;
 }
@@ -577,7 +610,7 @@ header .follow a:focus{
     line-height: 5rem;
     font-size: 2rem;
     background: var(--main-color);
-    color: whitesmoke;
+    color: var(--box-color);
     border-radius: 50%;
     transition: .4s ease;
 }
@@ -612,7 +645,7 @@ header .follow a:focus{
 
 .contact .row form{
     flex: 1 1 45rem;
-    background: whitesmoke;
+    background: var(--box-color);
     padding: 0 2rem;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0 0.8);
     border: .3rem;
@@ -630,13 +663,12 @@ header .follow a:focus{
 .contact .row form .box,
 .contact .row form textarea{
     width: 100%;
-    border-bottom: .1rem solid #333;
-    color: #333;
+    color: #000000;
     text-overflow: none;
     font-size: 1.7rem;
     padding: .5rem 0;
     margin: .5rem 0;
-    background-color: whitesmoke;
+    background-color: var(--fadedwhite-color);
 }
 
 
@@ -658,7 +690,7 @@ header .follow a:focus{
 .contact .row form textarea{
     height: 10rem;
     resize: none;
-    background-color: whitesmoke;
+    background-color: var(--fadedwhite-color);
 }
 
 .contact .row form .btn{
@@ -666,14 +698,43 @@ header .follow a:focus{
     margin-bottom: .61rem;
 }
 
+/* Styles for the footer */
+.footer {
+    background-color: var(--box-color);
+    padding: 5px;
+    text-align: center;
+    position: static;
+    width: 100%;
+  }
+  
+  .follow {
+    margin-bottom: 5px;
+  }
+  
+  .follow a {
+    color: var(--main-color);
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  
+  .follow a:hover {
+    color: #007bff;
+  }
+  
+  footer > a{
+    color: black;
+  }
+  /* Additional styles for other parts of your website can be added here */
 
+  
 /*media queries*/
 @media (max-width:991px){
     html{
         font-size: 55%;
     }
     body{
-        padding:0;
+        padding:2rem;
     }
     #menu-bars{
         display: initial;
@@ -682,11 +743,6 @@ header .follow a:focus{
      header{
         left: -120%;
      }
-     .portfolio .box-container .box img{
-        height: 80%;
-        width: 85%;
-        border-color: none;
-    }
   
      header.active{
         left: 0%;
@@ -717,18 +773,24 @@ header .follow a:focus{
         border-radius: 25%;
         align-items: center;
     }
+    .about .row-2 .skills .progress{
+        width: 30vh;
+    }
+    .portfolio .box-container .box {
+        height: 50rem;
+        width: 35rem;
+    }
     .experience .box-container .box {
         padding-right:  0rem;
     }
-    .portfolio .box-container .box img{
-        height: 80%;
-        width: 85%;
-    }
+
     .btn{
         border-radius: 0px;
         margin-right: 2rem;
     }
-    
+    .about .row-2{
+        flex-direction: column-reverse;
+    }
 }
 
 

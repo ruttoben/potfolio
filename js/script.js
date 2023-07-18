@@ -44,6 +44,7 @@ gsap.utils.toArray(".heading").forEach(function (elem) {
 
 
 
+
 let menu =document.querySelector('#menu-bars');
 let header =document.querySelector('header')
 
