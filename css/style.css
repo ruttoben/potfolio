@@ -79,7 +79,7 @@ header{
 }
 section{
     margin: 0rem;
-    padding: 3rem;
+    padding: 2rem;
 }
 
 header .logo{
@@ -250,7 +250,8 @@ header .follow a:focus{
 
 .about .row-1 .content h3{
     color: #242222;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
+    font-weight: 600;
 }
 .about .row-1 .content p{
     color: black;
@@ -410,7 +411,7 @@ header .follow a:focus{
     padding-top: .5rem;
     color: #000000cb;
     text-transform: none;
-    font-weight: 400;
+    font-weight: 500;
     text-align: center;
 }
 
@@ -482,7 +483,7 @@ header .follow a:focus{
 .portfolio .box-container .box .animated-title > div {
     height: 80%;
     width: 80%;
-    object-fit: cover;
+    object-fit: fill;
     border-radius: .5rem;
     position: absolute;
     z-index: 1;
@@ -609,7 +610,7 @@ header .follow a:focus{
 
 
 .contact .icon-container .icons{
-    flex: 1 1 15rem;
+    flex: 1 1 30rem;
     text-align: center;
     padding: 2rem;
     background: var(--box-color);
