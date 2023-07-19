@@ -83,20 +83,39 @@ var typed =  new Typed(".typing",{
     loop: true
 });
 
-var typed =  new Typed("#text1",{
-    strings:[`I am passionate about using technology to solve real-world 
-                problems and create innovative solutions.  My expertise includes front-end
-                 development with HTML, CSS, and JavaScript, as well as back-end development
-                  using Node.js and databases such as MongoDB and MySQL.</br> I have a keen eye for 
-                  design and user experience, and I always strive to create intuitive, 
-                  responsive, and scalable web applications.`],
-    typeSpeed:35,
-    BackSpeed: 60,
-    showCursor: false,
-    loop: false
-
-});
 
 
 
+function typeParagraph(elementId, text, speed, loopCount, delayBeforeRestart) {
+  const element = document.getElementById(elementId);
+  let index = 0;
+  let loop = 0;
 
+  // Function to type a character with a delay based on the speed
+  function typeCharacter() {
+    if (index < text.length) {
+      element.textContent += text.charAt(index);
+      index++;
+      setTimeout(typeCharacter, speed);
+    } else {
+      // Check if the loop count is reached
+      loop++;
+      if (loop < loopCount) {
+        setTimeout(restartTyping, delayBeforeRestart);
+      }
+    }
+  }
+
+  // Function to restart typing after a delay
+  function restartTyping() {
+    index = 0;
+    element.textContent = "";
+    typeCharacter();
+  }
+
+  // Start typing the paragraph
+  typeCharacter();
+}
+
+// Call the function with your desired parameters
+typeParagraph("text1", "In my free time, I enjoy contributing to open-source projects, attending tech meetups, and learning new programming languages. I'm excited to continue growing in my career and collaborating with other like-minded individuals to create innovative solutions that make a difference.", 50, 5, 100);
