@@ -108,6 +108,7 @@ header .navbar a {
     margin: 0rem 0;
     padding: 1.5rem;
     line-height: 3rem;
+    font-weight: 600;
 
 }
 
@@ -151,27 +152,7 @@ header .follow a:focus{
 #menu-bars{
         display: initial;
  }
-.cusor-1{
-    position: absolute;
-    top: 0px; left: 0px;
-    height: .5rem; width: .5rem;
-    background: var(--main-color);
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 10000;
-}
-.cusor-2{
-    position: absolute;
-    top: 0px; left: 0px;
-    height: 4rem; width: 4rem;
-    border: 0.1rem solid var(--main-color);
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 10000;
-    transition: 10ms linear;
-}
+
 
  
 .home {
@@ -412,6 +393,16 @@ header .follow a:focus{
     font-size: 2.8rem;
     color: var(--primary-color);
     padding-top: 1rem;
+}
+
+.service .box-container .box  .highlight{
+    
+    border-radius: 2rem;
+    padding: 1rem;
+    animation:  1s ease-in-out 2s forwards backwards;
+}
+.service .box-container .box  .highlight:hover{
+    background-color: #0aaa3a54;
 }
 
 .service .box-container .box p{

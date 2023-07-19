@@ -62,22 +62,11 @@ window.onscroll = () => {
 
 
 
-let cusor1 =document.querySelector('.cusor-1')
-let cusor2 =document.querySelector('.cusor-2')
-
-
-
-window.onmousemove = (e) => {
-    cusor1.style.top = e.pageY + 'px';
-    cusor1.style.left = e.pageX + 'px';
-    cusor2.style.top = e.pageY + 'px';
-    cusor2.style.left = e.pageX + 'px';
-}
 
 
 
 var typed =  new Typed(".typing",{
-    strings:["", " web designer", " Data analyst", " cyber-security consoltunt"],
+    strings:["", " web designer", " Data analyst", " cyber-security consultant"],
     typeSpeed:80,
     BackSpeed: 60,
     loop: true
